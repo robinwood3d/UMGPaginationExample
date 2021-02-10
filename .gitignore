@@ -72,3 +72,19 @@ Plugins/*/Intermediate/*
 
 # Cache files for the editor to use
 DerivedDataCache/*
+
+# 如果和Subversion一起共用，那么需要忽略.svn文件夹
+.svn/*
+
+#Content目录下的Collections和Developers文件夹要忽略
+Content/Collections/*
+Content/Developers/*
+
+# SteamVRInput插件ThirdParty不能忽略，否则无法编译通过，注意前面有设置全局忽略
+!Plugins/SteamVRInput/Source/ThirdParty/*
+!Plugins/SteamVRInput/Source/ThirdParty/**/**/*.lib
+!Plugins/SteamVRInput/Source/ThirdParty/**/**/*.dll
+!Plugins/SteamVRInput/Source/ThirdParty/**/**/*.dylib
+!Plugins/SteamVRInput/Source/ThirdParty/**/**/*.so
+
+
